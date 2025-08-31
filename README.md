@@ -21,7 +21,6 @@ An **online medicine ordering platform** that enables users to securely purchase
 - 📋 List all available drugs  
 - ✏️ Edit drug details  
 - ❌ Delete drugs  
-- 🔎 Search drug 
 
 #### 👥 Drug Access (Members)  
 - View drug details 
@@ -71,8 +70,8 @@ An **online medicine ordering platform** that enables users to securely purchase
 
 # 1️⃣ Clone Repository  
 ```bash
-git clone https://github.com/KartikpatilKP/Team4_online_pharma.git
-cd Team4_online_pharma
+git clone https://github.com/KartikpatilKP/Team4_online_Pharmacy.git
+cd Team4_online_Pharmacy
 
 ```
 # 2️⃣ Backend (Spring Boot + MySQL)
@@ -87,7 +86,7 @@ cd backend
 
 
 ```
-# Build & run
+ Build & run
 
 mvn clean install
 
