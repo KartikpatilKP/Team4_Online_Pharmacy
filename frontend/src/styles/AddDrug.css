@@ -1,0 +1,226 @@
+.add-drug-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+}
+
+.drug-form {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+    border-radius: 24px;
+    padding: 40px 35px;
+    width: 100%;
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.form-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4, #a1c4fd, #c2ffd8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-subheading {
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    width: 100%;
+}
+@media (max-width: 650px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.drug-form input,
+.drug-form textarea,
+.drug-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 14px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.drug-form input:focus,
+.drug-form textarea:focus,
+.drug-form select:focus {
+    outline: none;
+    border-color: #a1c4fd;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(161, 196, 253, 0.5);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.dropzone-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dropzone {
+    border: 2px dashed rgba(161, 196, 253, 0.7);
+    padding: 14px;
+    text-align: center;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #444;
+    transition: 0.3s ease;
+}
+.dropzone:hover {
+    border-color: #ffb3ba;
+    box-shadow: 0 0 14px rgba(174, 229, 255, 0.6);
+}
+
+.choose-file-btn {
+    display: inline-block;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #a1c4fd, #c2ffd8);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.choose-file-btn input[type="file"] {
+    display: none;
+}
+.choose-file-btn-label {
+    display: inline-block;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 18px;
+}
+.choose-file-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(161, 196, 253, 0.6);
+}
+
+.image-preview {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.image-preview img {
+    max-width: 180px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    border-radius: 24px;
+    cursor: pointer;
+
+    background: linear-gradient(270deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
+    background-size: 400% 400%;
+    animation: pastelGlow 6s ease infinite;
+
+    box-shadow: 0 0 20px rgba(161, 196, 253, 0.4);
+    transition: all 0.3s ease;
+}
+.submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(161, 196, 253, 0.7);
+}
+
+@keyframes pastelGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.switch-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 14px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #1abc9c; 
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(24px);
+}

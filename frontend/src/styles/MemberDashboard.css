@@ -1,0 +1,296 @@
+:root {
+  --member-primary: #5b86e5;
+  --member-secondary: #36d1dc;
+  --member-bg: #f6f9fc;
+  --member-card-bg: #ffffff;
+  --member-border: #dce3ec;
+  --member-shadow: 0 8px 24px rgba(91, 134, 229, 0.15);
+  --member-radius: 20px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --text-muted: #6e7a8a;
+  --max-content-width: 1280px;
+  --gap: 2rem;
+  --radius: 16px;
+  --spacing: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #1f2d3a;
+  line-height: 1.5;
+  background: url("../assets/Images/MemberDashboard.png") center center / cover no-repeat fixed;
+}
+
+.member-dashboard-root {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.member-main-content {
+  background: transparent; 
+  border-radius: var(--member-radius);
+  box-shadow: none; 
+  border: none;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 1.5rem auto;
+  width: 100%;
+  max-width: var(--max-content-width);
+}
+
+.member-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.member-title1 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--member-primary), var(--member-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+  margin: 0 auto;
+}
+
+.member-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.member-stat-card {
+  background: linear-gradient(145deg, #ffffff, #f2f7ff);
+  border-radius: var(--member-radius);
+  box-shadow: var(--member-shadow);
+  padding: 1.5rem 1.75rem;
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+  border: 1px solid var(--member-border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.member-stat-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(91, 134, 229, 0.25);
+}
+
+.member-stat-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.member-stat-value {
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.medicine-table-section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.table-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.table-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--member-primary), var(--member-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 auto;
+}
+
+.table-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: var(--radius);
+  background: #ffffff;
+  border: 1px solid var(--member-border);
+  box-shadow: var(--member-shadow);
+  overflow: hidden;
+}
+
+.table-scroll-container {
+  max-height: 370px;
+  overflow-y: auto;
+  border-radius: var(--radius);
+}
+
+.medicine-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  min-width: 750px;
+  color: #2c3e50;
+}
+
+.medicine-table thead {
+  background: #f1f5fb;
+}
+
+.medicine-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f1f5fb;
+  color: #2c3e50;
+  z-index: 2;
+  padding: 14px 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.6px;
+  border-bottom: 2px solid #dce3ec;
+}
+
+.medicine-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eef2f7;
+  vertical-align: middle;
+  line-height: 1.45;
+}
+
+.medicine-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+.medicine-table tbody tr:nth-child(even) {
+  background: #f9fbff;
+}
+
+.medicine-table tbody tr:hover {
+  background: #eef5ff;
+  transition: background var(--transition);
+}
+
+.medicine-table td img {
+  max-width: 100px;  
+  max-height: 80px;  
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  object-fit: contain; 
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-table td:last-child {
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(90deg, var(--member-primary), var(--member-secondary));
+  border: none;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: 0 4px 14px rgba(91, 134, 229, 0.3);
+  min-width: 110px;
+}
+
+.add-to-cart-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: #999;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(91, 134, 229, 0.45);
+  filter: brightness(1.08);
+}
+
+.list-error,
+.stats-error {
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #fff0f0;
+  color: #b00020;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #ffcccc;
+}
+
+.empty-state {
+  padding: 16px;
+  background: #f0f9ff;
+  border-radius: 10px;
+  border: 1px solid #cfe8ff;
+  color: #055160;
+  font-size: 0.95rem;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 380px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 128, 96, 0.15);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
