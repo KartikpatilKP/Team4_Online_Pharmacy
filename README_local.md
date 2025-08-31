@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Team4_Online_Pharmacy
 =======
 # 💊 Online Pharmacy Portal (Online Drug Ordering System)
