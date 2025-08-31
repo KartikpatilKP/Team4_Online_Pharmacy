@@ -1,7 +1,7 @@
-# Team4_Online_Pharmacy
+Team4_Online_Pharmacy
 
 # 💊 Online Pharmacy Portal  
-### (Online Drug Ordering System)
+### 🛒 Online Medicine Ordering & Management System
 
 An **online medicine ordering platform** that enables users to securely purchase medicines while providing admins with full control over drug inventory, member management, and order processing.  
 
@@ -69,7 +69,40 @@ An **online medicine ordering platform** that enables users to securely purchase
 
 ## ⚙️ Setup & Run Instructions  
 
-### 1️⃣ Clone Repository  
+# 1️⃣ Clone Repository  
 ```bash
 git clone https://github.com/KartikpatilKP/Team4_online_pharma.git
 cd Team4_online_pharma
+
+```
+# 2️⃣ Backend (Spring Boot + MySQL)
+
+cd backend
+```
+# Configure database
+# Edit src/main/resources/application.properties:
+# spring.datasource.url=jdbc:mysql://localhost:3306/onlinepharma
+# spring.datasource.username=root
+# spring.datasource.password=root
+
+
+```
+# Build & run
+
+mvn clean install
+
+mvn spring-boot:run
+
+# 3️⃣ Frontend (React + Vite)
+
+cd frontend
+
+1.Install dependencies      
+    --npm install
+
+2.Run development server  
+    --npm run dev
+
+👉 Frontend will run at: http://localhost:5173
+
+
